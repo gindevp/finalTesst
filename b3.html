@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function prime(Number) {
+        let count = 0;
+        let primeSum = 0;
+        for (let i = 2; i < Number; i++) {
+            for (let j = 1; j <= i; j++) {
+                if (i % j == 0) {
+                    count += 1;
+                }
+            }
+            if (count == 2) {
+                sum += i;
+            }
+            count = 0;
+        }
+        document.write(primeSum);
+    }
+
+    prime(10)
+</script>
+</body>
+</html>

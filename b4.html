@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas"></canvas>
+<script>
+    let canvas = document.getElementById("myCanvas").getContext("2d")
+
+    class Rectangle{
+        x
+        y
+        width
+        height
+        color
+        constructor(x,y,width,height,color) {
+            this.x = x
+            this.y = y
+            this.width = width
+            this.height = height
+            this.color = color
+        }
+        render(x,y,width,height,color){
+            canvas.beginPath()
+            canvas.fillStyle= color
+            canvas.fillRect(x,y,width,height)
+            canvas.stroke()
+            canvas.closePath()
+        }
+    }
+
+    canvas.beginPath()
+    canvas.fillStyle = "#ff0000"
+    canvas.arc(10, 10, 100, 0, Math.PI*2)
+    canvas.fill()
+
+
+
+    let newRactangle = new Rectangle()
+    newRactangle.render(100,100,150,100, "violet")
+</script>
+</body>
+</html>
