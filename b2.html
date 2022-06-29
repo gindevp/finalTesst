@@ -9,15 +9,12 @@
   function insertNumberToArray(arr,x,index){
             if(index<0||index>arr.length){
                 return arr;
-
             }else {
                 arr[index]=x;
+                arr.forEach(x=>{
+                    document.write(arr)
+                })
             }
-            arr.forEach(x=>{
-                document.write(arr)
-            })
-
-
   }
 </script>
 </body>
